@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no,user-scalable=no">
+    <title>Title</title>
+    <link rel="stylesheet" href="hack.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Source+Code+Pro:300,500|Open+Sans:400italic,700italic,400,700|Roboto+Slab'>
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Varela+Round'>
+    <link rel='stylesheet' href='http://iprodev.github.io/Scrollax.js/assets/css/main.css'>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="anim.css">
+
+
+    <style>
+        a{
+            border-bottom: 0px;
+        }
+        #eventa{
+            display:inline-block;
+            width:42%;
+            height:300px;
+            margin-left: 5%;
+            overflow: hidden;
+        }
+        #eventb{
+            display:inline-block;
+            width:42%;
+            height:300px;
+            float:right;
+            margin-right:5%;
+            overflow:hidden;
+        }
+        .eventname{
+            color:white;
+            font-size:30px;
+            text-align: center;
+            font-weight: bold;
+        }
+        .eventh{
+            color:white;
+            font-size:24px;
+            font-style: italic;
+            margin-top: 50px;
+            animation:buttonrev;
+            animation-duration: 0.25s;
+        }
+        .eventi{
+            color:white;
+            font-size:25px;
+            font-style: italic;
+            margin-top: 50px;
+            animation:buttonrev;
+            animation-duration: 0.25s;
+        }
+        #eventa:hover .eventh{
+            animation:button;
+            animation-duration: 0.25s;
+            animation-fill-mode: forwards;
+        }
+        #eventb:hover .eventi{
+            animation:button;
+            animation-duration: 0.25s;
+            animation-fill-mode: forwards;
+        }
+        @keyframes button {
+            0%{margin-top: 130px;}
+            100%{margin-top: 40px;}
+        }
+        @keyframes buttonrev {
+            0%{margin-top: 80px;}
+            100%{margin-top: 130px;}
+        }
+        .learn{
+            background-color: whitesmoke;
+            border-radius: 40% 40% 40% 40%;
+            margin-top:0;
+            margin-left:20px;
+            color:black;
+            font-weight: bold;
+            width:140px;
+            text-align: center;
+
+            height:45px;
+
+        }
+        @media (max-width: 1024px){
+            #eventa{
+                width:48%;
+                margin-left: 0px;
+                margin-right: 1px;
+            }
+            #eventb{
+                width:48%;
+                margin-right:0px;
+                margin-left: 1px;
+            }
+        }
+        @media (max-width: 660px){
+            .eventh{
+                color:white;
+                font-size:12px;
+                font-style: italic;
+                margin-top: 130px;
+                animation:buttonrev;
+                animation-duration: 0.25s;
+            }
+            .eventi{
+                color:white;
+                font-size:14px;
+                font-style: italic;
+                margin-top: 130px;
+                animation:buttonrev;
+                animation-duration: 0.25s;
+            }
+            #eventa{
+                display:inline-block;
+                width:42%;
+                height:200px;
+                margin-left: 5%;
+                overflow: hidden;
+            }
+            #eventb{
+                display:inline-block;
+                width:42%;
+                height:200px;
+                float:right;
+                margin-right:5%;
+                overflow:hidden;
+            }
+
+        }
+        @media (max-width: 660px){
+            .eventh{
+                color:white;
+                font-size:12px;
+                font-style: italic;
+                margin-top: 130px;
+                animation:buttonrev;
+                animation-duration: 0.25s;
+            }
+            .eventi{
+                color:white;
+                font-size:14px;
+                font-style: italic;
+                margin-top: 130px;
+                animation:buttonrev;
+                animation-duration: 0.25s;
+            }
+        }
+        @media (max-width: 860px){
+            .eventh{
+                color:white;
+                font-size:22px;
+                font-style: italic;
+                margin-top: 130px;
+                animation:buttonrev;
+                animation-duration: 0.25s;
+            }
+            .eventi{
+                color:white;
+                font-size:22px;
+                font-style: italic;
+                margin-top: 130px;
+                animation:buttonrev;
+                animation-duration: 0.25s;
+            }
+        }
+        @media (max-width: 380px){
+            .eventh{
+                color:white;
+                font-size:12px;
+                font-style: italic;
+                margin-top: 130px;
+                animation:buttonrev;
+                animation-duration: 0.25s;
+            }
+            .eventi{
+                color:white;
+                font-size:12px;
+                font-style: italic;
+                margin-top: 130px;
+                animation:buttonrev;
+                animation-duration: 0.25s;
+            }
+            .eventname{
+                color:white;
+                font-size:16px;
+                text-align: center;
+                font-weight: bold;
+            }
+            #eventa{
+                display:inline-block;
+
+                height:180px;
+                margin-left: 5%;
+                overflow: hidden;
+            }
+            #eventb{
+                display:inline-block;
+                height:180px;
+                float:right;
+                margin-right:5%;
+                overflow:hidden;
+            }
+        }
+    </style>
+
+
+
+</head>
+<body>
+<div class="main">
+
+    <div class="nav" id="fixed-header">
+        <nav class="navbar navbar-expand-xl navbar-dark  fixed-top" id="mainNav">
+            <div class="container" style="max-width: 1400px">
+                <a class="navbar-brand" id='noborder' href="#">
+                    <img src="tech.png" width="150" height="100" alt="logo">
+                </a>
+                <a class="navbar-brand" id="noborder2" href="#">
+                    <img src="" width="100" height="100" alt="sponsor">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+
+                        <li class="nav-item">
+                            <a class="nav-color" class="nav-link" href="#page-top">HOME</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-color" class="nav-link" href="#special">ABOUT</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-color" class="nav-link" href="#speaker">SPEAKER</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-color" class="nav-link" href="#sponsors">SPONSORS</a>
+                        </li>
+
+                        <li  class="nav-item">
+                            <a class="nav-color" class="nav-link" href="#contact">CONTACT</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>
+    <section class="special" data-scrollax-parent="true">
+        <div class="cover" data-scrollax="properties: { translateY: '30%' }"><img src="https://myhealthrecorddeveloper.digitalhealth.gov.au/sites/default/files/images/animation_4.gif" /></div>
+        <div class="content" id="page-top">
+            <div class="text centralize">
+                <div data-scrollax="properties: { 'translateY': '150%', 'opacity': 1.5 }">
+                    <header class="major">
+                        <h2 id="name">IPEC Techathlon 2k18.</h2>
+                    </header>
+                    <p>What if the most creative minds channelled their focus into solving the most impactful problems of today? We are here with such a wonderful opportunity where you can show case your hacking abilities.
+                        -
+
+                        INDERPRASTHA ENGINEERING COLLEGE</p>
+                    <p></p>
+                    <button class="kno" onclick="location.href='#'" >About</button>
+                    <p></p>
+                    <p></p>
+                    <div id="timer">
+                        <span id="days"></span>days
+                        <span id="hours"></span>hours
+                        <span id="minutes"></span>minutes
+                        <span id="seconds"></span>seconds
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<div class="drd">
+    <a class="hackathon" href="hack/index.html" >
+        <div id="eventa" style="background-image: url('my/product-card-teamcity.png')">
+            <h3 class="eventname">HACKATHON</h3>
+            <div class="eventh">
+                <p>About Hackathon event.....</p>
+                <div class="learn">Know more</div>
+            </div>
+        </div>
+    </a>
+    <a class="innovazia" href="Innovazia/index.html" >
+        <div id="eventb" style="background-image: url('my/product-card-clion.png')">
+            <h3 class="eventname">INNOVAZIA
+            </h3>
+            <div class="eventi inoov">
+                <p>About Innovazia event......</p>
+                <div class="learn">Know more</div>
+            </div>
+        </div>
+    </a>
+</div>
+<section class="special" data-scrollax-parent="true">
+        <div class="cover" data-scrollax="properties: { translateY: '30%' }"><img src="pic.JPG" /></div>
+        <div class="content">
+            <div class="text centralize">
+                <div data-scrollax="properties: { 'translateY': '150%', 'opacity': 1.5 }">
+                    <header class="major">
+                        <h2>Code & Code</h2>
+                    </header>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p>Code without distractions. Put all of yours hard effort in coding. Never allow yourself to be distracted for a few moments or so.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="special" data-scrollax-parent="true">
+        <div class="cover" data-scrollax="properties: { translateY: '30%' }"><img src="dd.JPG" /></div>
+        <div class="content">
+            <div class="text centralize">
+                <div data-scrollax="properties: { 'translateY': '150%', 'opacity': 1.5 }">
+                    <header class="major">
+                        <h2>Being a Realistic Developer.</h2>
+                    </header>
+                    <p>We can similarly compare each of the four versions to the overall choices made by respondents on this question and find which fictional characters were more realistic.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="special" data-scrollax-parent="true">
+        <div class="cover" data-scrollax="properties: { translateY: '30%' }"><img src="winner.JPG" /></div>
+        <div class="content">
+            <div class="text centralize">
+                <div data-scrollax="properties: { 'translateY': '150%', 'opacity': 1.5 }">
+                    <header class="major">
+                        <h2>Winners.</h2>
+                    </header>
+                    <p>Of course there will be prizes although it isn’t all about winning but what you learn and build during the event. But don’t worry there will be a panel of judges that will select the three best hacks based on creativity, technical difficulty, design, and usefulness. Prizes for first, second and third place.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--<a class='reflink' href='http://animetap.bitballoon.com/' target='_blank'>animetap.bitballon.com</a>-->
+    <script src='http://iprodev.github.io/Scrollax.js/assets/js/jquery.min.js'></script>
+    <!--<script src='http://iprodev.github.io/Scrollax.js/assets/js/smoothscroll.js'></script>-->
+    <script src='http://iprodev.github.io/Scrollax.js/lib/scrollax.min.js'></script>
+
+
+
+    <script  src="script.js"></script>
+    <!--<div class="speaker">-->
+        <!--<a name="speaker"></a>-->
+    <!--</div>-->
+    <!---->
+    <!--<div class="sponsors">-->
+        <!--<a name="sponsors"></a>-->
+    <!--</div>-->
+
+    <!--<div class="contact">-->
+        <!--<a name="contact"></a>-->
+    <!--</div>-->
+    <div class="footer">
+        <footer class="footer-distributed">
+            <div class="footer-right">
+                <a href="https://www.facebook.com/ipechackathon/" class="fa fa-facebook" target="_blank"></a>
+                <a href="https://www.instagram.com/ipechackathon/" class="fa fa-instagram" target="_blank"></a>
+                <a href="https://www.twitter.com/ipechackathon/" class="fa fa-twitter" target="new"></a>
+            </div>
+            <div class="clglogo">
+                <img id="logo" src="IPEC Logo.png">
+            </div>
+            <div class="footer-left">
+                <p style="font-size: 18px; color:white"><b>IPEC Techathalon &copy; 2018</b></p>
+                <p style="font-size: 12px">63 Site IV, Sahibabad Industrial Area,<br>
+                    Surya Nagar Flyover Road Sahibabad, Ghaziabad-U.P <br>
+                    PIN Code-201010<br>
+                    Ph: +91(120) 4535000, 2895135,136,137<br></p>
+            </div>
+        </footer>
+    </div>
+<script src="shape.js"></script>
+<script>
+    jQuery(function($) {
+
+        $('a[href^="#page-top"]').on('click',function(event){
+            event.preventDefault();
+            var target_offset = $(this.hash).offset() ? $(this.hash).offset().top : 0;
+//change this number to create the additional off set
+            var customoffset = 85;
+            $('html, body').animate({scrollTop:target_offset - customoffset}, 500);
+        });
+
+        $('a[href^="#"]:not(a[href="#"]):not(a[href^="#page-top"])').click(function(){
+            $('html, body').animate({
+                scrollTop: $('[name="' + $.attr(this, 'href').substr(1) + '"]').offset().top
+            }, 500);
+            return false;
+        });
+
+    }(jQuery));
+</script>
+
+<script src="time.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+</html>
